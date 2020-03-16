@@ -1,0 +1,2 @@
+rootProject.name='Call Log'
+include ':app'
