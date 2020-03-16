@@ -5,10 +5,10 @@ import android.telephony.PhoneNumberUtils
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkStatic
+import java.util.Date
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import java.util.Date
 
 internal class CallLogTest {
     @BeforeEach
@@ -43,7 +43,7 @@ internal class CallLogTest {
         )
     }
 
-    //TODO: Investigate using table/parameterized tests
+    // TODO: Investigate using table/parameterized tests
     @Test
     fun `Direction#fromType maps android call types into a direction`() {
         assertEquals(

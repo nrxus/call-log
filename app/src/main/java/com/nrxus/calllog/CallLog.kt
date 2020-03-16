@@ -17,8 +17,10 @@ class CallLog(val entries: List<Entry>) {
         companion object {
             val PROJECTION = arrayOf(AndroidCalls.TYPE, AndroidCalls.NUMBER, AndroidCalls.DATE)
 
-            /// This cursor must have been obtained
-            /// using the exposed Entry.PROJECTION array
+            /**
+             * Returns an CallLog.Entry from a Cursor
+             * This cursor must have been obtained using the exposed CallLog.Entry.PROJECTION array
+            */
             fun fromCursor(cursor: Cursor): Entry {
                 val direction = Direction.fromType(cursor.getInt(0))
                 val number = formatPhone(cursor.getString(1))
